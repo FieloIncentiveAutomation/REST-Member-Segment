@@ -1,0 +1,14 @@
+
+=== User Description
+
+ key          label                                                                                                            
+ ──────────── ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+ Username     scratchorg@unmanagedrestapi.org                                                                                  
+ Profile Name System Administrator                                                                                             
+ Id           00588000002WirBAAS                                                                                               
+ Org Id       00D88000000TnBpEAK                                                                                               
+ Access Token 00D88000000TnBp!AQEAQIOh4zsBr8UzGLm4.d0i8XmWm4GsJxmmnKBTcMJFlRry34rQs1Qlojo4GgsYq9UVZ_XwI8srHINmAsFJBrmx1gd.Vcxy 
+ Instance Url https://app-enterprise-4542-dev-ed.my.salesforce.com                                                             
+ Login Url    https://app-enterprise-4542-dev-ed.my.salesforce.com/                                                            
+ Alias        unmanagedRestAPI                                                                                                 
+ Password     ]0eszknkaChfd                                                                                                    
