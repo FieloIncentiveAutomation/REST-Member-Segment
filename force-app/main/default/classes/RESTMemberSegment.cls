@@ -21,7 +21,6 @@ global with sharing class RESTMemberSegment {
         String order = RestContext.request.params.get('orderby');
         String orderBy = String.isNotBlank(order)  ? order :'CreatedDate ASC';
 
-        RestAPIResponse response = new RestAPIResponse();
         RestResponse resp = RestContext.response;
         resp.addHeader('Accept', 'application/json');
         resp.addHeader('Content-Type', 'application/json');
@@ -42,12 +41,12 @@ global with sharing class RESTMemberSegment {
             List<FieloPLT__Segment__c> segments = (List<FieloPLT__Segment__c>) Database.query(query);
             resp.responseBody = Blob.valueOf( JSON.serialize(segments) );
             resp.statusCode = 200;
-            response.message = 'SUCESS';
         } else {
             resp.statusCode = 404;
-            response.errorcode = 'RECORD_NOT_FOUND';
-            response.message = 'Record not found';
-            resp.responseBody = Blob.valueOf( JSON.serialize(new List<RestAPIResponse>{response}) );
+            Map<String,String> errorMap = new Map<String,String>();
+            errorMap.put('message', 'No segments found');
+            errorMap.put('errorcode', 'RECORD_NOT_FOUND');
+            resp.responseBody = Blob.valueOf(JSON.serialize(errorMap));
         }
     }
 }
